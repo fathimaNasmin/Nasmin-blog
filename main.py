@@ -1,5 +1,4 @@
-import os
-from dotenv import load_dotenv
+
 from functools import wraps
 from flask import Flask, render_template, redirect, url_for, flash, request, abort
 from flask_bootstrap import Bootstrap
@@ -12,9 +11,9 @@ from flask_login import UserMixin, login_user, LoginManager, login_required, cur
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 from flask_gravatar import Gravatar
 
-load_dotenv("/Users/fathimanasmin/Desktop/udemyCourse/.env.txt")
+
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv("BLOG_SECRET_KEY")
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
 ckeditor = CKEditor(app)
 Bootstrap(app)
 
